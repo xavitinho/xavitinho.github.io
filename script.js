@@ -17,47 +17,49 @@ body.style = `background-image: url("backgrounds/${bg}.jpg")`
 
 let buttonslist = document.getElementById('buttonslist')
 
-buttonslist.innerHTML = ''
-
 for (link of Object.keys(links)) {
   buttonslist.innerHTML +=
-    `<button id="${link}"
+    `<div class="link" id="link_${link}">
+    <button id="button_${link}"
      onclick="window.open('${links[link][1]}','_blank')"
      onmouseover="mouseover('${link}')"
      onmouseout="mouseout('${link}')">
      <ion-icon name="${links[link][3]}"></ion-icon>
      <strong>${links[link][0]}</strong>
-  </button>`
+  </button>
+  </div>`
 }
 
 colorbuttons()
 
+function colorbuttons() {
+  let colors = ['#f00a', '#f80a', '#ff0a', '#8f0a', '#0f8a', '#0ffa', '#08fa', '#00fa', '#80fa', '#f0fa', '#f08a', '#f0fa']
+  let i = 1;
+  let colorant = colors[0]
+  for (link of Object.keys(links)) {
+    let e = document.getElementById(`link_${link}`)
+    e.style= `background-image: linear-gradient(${colorant}, ${colors[i]});`
+    colorant = colors[i]
+    i++;
+  }
+}
+
 function mouseover(link) {
-  let e = document.getElementById(link)
+  let e = document.getElementById(`button_${link}`)
   if (links[link][2]) {
     e.innerHTML = `<strong>${links[link][2]}</strong>`
   } else {
     e.innerHTML = `<strong>${links[link][1].replace('https://', '')}</strong>`
   }
-  e.style = "background-color: #000a; color: #fff;"
+  e = document.getElementById(`link_${link}`)
+  e.style = "background-color: #000a;"
 }
 
 function mouseout(link) {
-  let e = document.getElementById(link)
+  let e = document.getElementById(`button_${link}`)
   e.innerHTML = `
   <ion-icon name="${links[link][3]}"></ion-icon>
   <strong>${links[link][0]}</strong>`
   colorbuttons()
 }
 
-function colorbuttons() {
-  let colors = ['#f00a', '#f80a', '#ff0a', '#8f0a', '#0f8a', '#0ff', '#08fa', '#00fa', '#80fa', '#f0fa', '#f08a', '#f0f']
-  let i = 1;
-  let colorant = colors[0]
-  for (link of Object.keys(links)) {
-    let e = document.getElementById(link)
-    e.style= `background-image: linear-gradient(${colorant}, ${colors[i]});`
-    colorant = colors[i]
-    i++;
-  }
-}
