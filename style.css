@@ -24,11 +24,13 @@ html {
 }
 
 button {
+  color: #fff;
   cursor: pointer;
   height: 100%;
   width: 100%;
   background-color: #0000;
   border: none;
+  text-shadow: 0px 0px 4px #000;
 }
 
 button:hover {
