@@ -81,7 +81,7 @@ function mouseout(link) {
 
 async function biblia() {
   let bibliatxt = 'deu ruim'
-  await fetch('https://xaax.repl.co/biblia.txt')
+  await fetch('https://xavitinho.github.io/biblia.txt')
     .then(response => response.text())
     .then(txtResponse => {
       bibliatxt = txtResponse
