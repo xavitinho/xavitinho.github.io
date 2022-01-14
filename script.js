@@ -11,7 +11,7 @@ let links = {
   gamerfilosofobot: ['gamer filósofo bot', 'https://xavitinho.github.io/gamerfilobot', false, 'open']
 }
 
-let bg = Math.floor(Math.random() * 5)
+let bg = Math.floor(Math.random() * 6)
 let body = document.getElementById('body')
 body.style = `background-image: url("backgrounds/${bg}.jpg")`
 
