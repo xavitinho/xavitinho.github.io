@@ -33,7 +33,7 @@ for (link of Object.keys(links)) {
 colorbuttons()
 
 function colorbuttons() {
-  let colors = ['#f00a', '#f80a', '#ff0a', '#8f0a', '#0f8a', '#0ffa', '#08fa', '#00fa', '#80fa', '#f0fa', '#f08a', '#f0fa']
+  let colors = ['#f00c', '#f80c', '#ff0c', '#8f0c', '#0f8c', '#0ffc', '#08fc', '#00fc', '#80fc', '#f0fc', '#f08c', '#f0fc']
   let i = 1;
   let colorant = colors[0]
   for (link of Object.keys(links)) {
