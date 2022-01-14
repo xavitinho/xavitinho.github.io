@@ -12,10 +12,18 @@ let links = {
 }
 
 let bg = Math.floor(Math.random() * 6)
-let body = document.getElementById('body')
-body.style = `background-image: url("backgrounds/${bg}.jpg")`
+let ebg = document.getElementById('bg')
+ebg.style = `background-image: url("backgrounds/${bg}.jpg")`
 
-let buttonslist = document.getElementById('buttonslist')
+
+makebuttons()
+
+function makebuttons () {
+  let e = document.getElementById('backbt')
+  e.innerHTML = ''
+
+  let buttonslist = document.getElementById('section')
+  buttonslist.innerHTML = ''
 
 for (link of Object.keys(links)) {
   buttonslist.innerHTML +=
@@ -29,8 +37,16 @@ for (link of Object.keys(links)) {
   </button>
   </div>`
 }
+buttonslist.innerHTML +=
+  `<div class="link">
+  <button class="bibliabutton" onclick="biblia()">
+     <ion-icon name="book"></ion-icon>
+     <strong>A Bíblia Sagrada</strong>
+  </button>
+  </div>`
 
 colorbuttons()
+}
 
 function colorbuttons() {
   let colors = ['#f00c', '#f80c', '#ff0c', '#8f0c', '#0f8c', '#0ffc', '#08fc', '#00fc', '#80fc', '#f0fc', '#f08c', '#f0fc']
@@ -63,3 +79,24 @@ function mouseout(link) {
   colorbuttons()
 }
 
+async function biblia() {
+  let bibliatxt = 'deu ruim'
+  await fetch('https://xaax.repl.co/biblia.txt')
+    .then(response => response.text())
+    .then(txtResponse => {
+      bibliatxt = txtResponse
+    })
+
+  let e = document.getElementById('section')
+  e.innerHTML = '<div class="bgbiblia"><biblia id="biblia"></biblia></div>'
+
+  e = document.getElementById('biblia')
+  e.innerText = bibliatxt
+  e.innerHTML += '<br><br><br><br><br><br><br><br>'
+  
+  e = document.getElementById('backbt')
+  e.innerHTML = `
+    <button class="backbt">
+    <ion-icon name="arrow-back-circle" onclick="makebuttons()"></ion-icon>
+    </button>`
+}
