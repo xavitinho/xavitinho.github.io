@@ -6,7 +6,7 @@ let links = {
   spotify: ['spotify', 'https://open.spotify.com/user/asxvitor', '@asxvitor', 'play-circle'],
   youtube: ['youtube', 'https://youtube.com/xrvitro', false, 'logo-youtube'],
   twitch: ['twitch', 'https://twitch.tv/xavierxavierv', false, 'logo-twitch'],
-  github: ['github', 'https://xavitinho.github.io', false, 'logo-github'],
+  github: ['github', 'https://github.com/xavitinho', false, 'logo-github'],
   palavrau: ['palavrau', 'https://xavitinho.github.io/palavrau', false, 'open'],
   gamerfilosofobot: ['gamer filósofo bot', 'https://xavitinho.github.io/gamerfilobot', false, 'open']
 }
