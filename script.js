@@ -8,7 +8,7 @@ let links = {
   youtube: ['youtube', 'https://youtube.com/xrvitro', false, 'logo-youtube'],
   twitch: ['twitch', 'https://twitch.tv/xavierxavierv', false, 'logo-twitch'],
   github: ['github', 'https://github.com/xavitinho', false, 'logo-github'],
-  palavrau: ['palavrau', 'https://xavitinho.github.io/palavrau', false, 'open'],
+  itchio: ['itch.io', 'https://xaax.itch.io', false, 'game-controller'],
   gamerfilosofobot: ['gamer filósofo bot', 'https://xavitinho.github.io/gamerfilobot', false, 'open']
 }
 
