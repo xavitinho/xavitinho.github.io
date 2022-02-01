@@ -12,6 +12,8 @@ let links = {
   gamerfilosofobot: ['gamer filósofo bot', 'https://xavitinho.github.io/gamerfilobot', false, 'open']
 }
 
+
+
 let bg = Math.floor(Math.random() * 6)
 
 let ebg = document.getElementById('bg')
@@ -29,22 +31,21 @@ function makebuttons() {
 
   for (link of Object.keys(links)) {
     buttonslist.innerHTML +=`
-    <div class="link" id="link_${link}">
-      <button class="linkbutton" id="button_${link}">
-        <ion-icon name="${links[link][3]}"></ion-icon>
-        <strong>${links[link][0]}</strong>
-      </button>
-      <div class ="responsive"
-      onclick="window.open('${links[link][1]}','_blank')"
+    <a href="${links[link][1]}" target= "_blank" 
+      class="link" id="link_${link}"
       onmouseover="mouseover('${link}')"
-      onmouseout="mouseout('${link}')"> </div>
+      onmouseout="mouseout('${link}')">
+        <ion-icon name="${links[link][3]}">
+        </ion-icon>
+        ${links[link][0]}
     </div>`
   }
   buttonslist.innerHTML +=
     `<div class="link">
   <button class="blackbutton" onclick="biblia()">
-     <ion-icon name="book"></ion-icon>
-     <strong>A Bíblia Sagrada</strong>
+     <ion-icon name="book">
+     </ion-icon>
+     A Bíblia Sagrada
   </button>
   </div>`
 
@@ -64,21 +65,22 @@ function colorbuttons() {
 }
 
 function mouseover(link) {
-  let e = document.getElementById(`button_${link}`)
+  let e = document.getElementById(`link_${link}`)
   if (links[link][2]) {
-    e.innerHTML = `<strong>${links[link][2]}</strong>`
+    e.innerHTML = `${links[link][2]}`
   } else {
-    e.innerHTML = `<strong>${links[link][1].replace('https://', '')}</strong>`
+    e.innerHTML = `${links[link][1].replace('https://', '')}`
   }
   e = document.getElementById(`link_${link}`)
   e.style = "background-color: #000c;"
 }
 
 function mouseout(link) {
-  let e = document.getElementById(`button_${link}`)
+  let e = document.getElementById(`link_${link}`)
   e.innerHTML = `
-  <ion-icon name="${links[link][3]}"></ion-icon>
-  <strong>${links[link][0]}</strong>`
+  <ion-icon name="${links[link][3]}">
+  </ion-icon>
+  ${links[link][0]}`
   colorbuttons()
 }
 
