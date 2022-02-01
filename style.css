@@ -154,25 +154,55 @@ ion-icon {
   margin-bottom: 10%;
 }
 
+#biblia {
+  font-family: 'Consolas';
+}
+
+#gamecontainer {
+  width: 1024px;
+  height: 600px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+#bolas {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+}
+
+.buttonfullscreen {
+  position: relative;
+  left: 0.2em;
+  top: 100%;
+  z-index: 1;
+  color: #fff6;
+  background-color: #0006;
+}
+
 .backbt {
-  color: #fff;
   position: fixed;
   top: 1%;
   left: 1%;
+  color: #fff;
+  background-color: #0000;
+}
+
+.buttonfullscreen, .backbt {
   z-index: 3;
   height: 2em;
   width: 2em;
-  font-size: 2em;
-  background-color: #0000;
+  font-size: 1.5em;
   border: none;
   cursor: pointer;
 }
 
-#bolas {
-  width: 1024px;
-  height: 600px;
-}
-
-#biblia {
-  font-family: 'Consolas';
+.invisible {
+  display: none;
 }
