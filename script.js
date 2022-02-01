@@ -9,10 +9,8 @@ let links = {
   twitch: ['twitch', 'https://twitch.tv/xavierxavierv', false, 'logo-twitch'],
   github: ['github', 'https://github.com/xavitinho', false, 'logo-github'],
   itchio: ['itch.io', 'https://xaax.itch.io', false, 'game-controller'],
-  gamerfilosofobot: ['gamer filósofo bot', 'https://xavitinho.github.io/gamerfilobot', false, 'open']
+  bolas: ['bolas', '/bolas', 'bolas', 'game-controller', true]
 }
-
-
 
 let bg = Math.floor(Math.random() * 6)
 
@@ -22,6 +20,16 @@ ebg.style = `background-image: url("backgrounds/${bg}.jpg")`
 
 makebuttons()
 
+const urlSearchParams = new URLSearchParams(window.location.search);
+if (urlSearchParams) {
+  const params = Object.fromEntries(urlSearchParams.entries())
+  if(params.play) {
+    if(params.play == 'bolas') {
+      exe_bolas()
+    }
+  }
+}
+
 function makebuttons() {
   let e = document.getElementById('backbt')
   e.innerHTML = ''
@@ -30,25 +38,34 @@ function makebuttons() {
   buttonslist.innerHTML = ''
 
   for (link of Object.keys(links)) {
-    buttonslist.innerHTML +=`
-    <a href="${links[link][1]}" target= "_blank" 
+    if (!links[link][4]) {
+      buttonslist.innerHTML +=`
+      <a href="${links[link][1]}" target= "_blank" 
       class="link" id="link_${link}"
       onmouseover="mouseover('${link}')"
       onmouseout="mouseout('${link}')">
         <ion-icon name="${links[link][3]}">
         </ion-icon>
         ${links[link][0]}
-    </div>`
+      </a>`
+    }
   }
   buttonslist.innerHTML +=
-    `<div class="link">
+  `<div class="link" id="link_bolas" 
+  onclick="exe_bolas()"
+  onmouseover="mouseover('bolas')"
+  onmouseout="mouseout('bolas')">
+     <ion-icon name="game-controller">
+     </ion-icon>
+     bolas
+  </div>
+  <div class="link">
   <button class="blackbutton" onclick="biblia()">
      <ion-icon name="book">
      </ion-icon>
      A Bíblia Sagrada
   </button>
   </div>`
-
   colorbuttons()
 }
 
@@ -99,6 +116,16 @@ async function biblia() {
   e.innerText = bibliatxt
   e.innerHTML += '<br><br><br><br><br><br><br><br>'
 
+  e = document.getElementById('backbt')
+  e.innerHTML = `
+    <button class="backbt">
+    <ion-icon name="arrow-back-circle" onclick="makebuttons()"></ion-icon>
+    </button>`
+}
+
+function exe_bolas () {
+  let e = document.getElementById('middlesection')
+  e.innerHTML = '<iframe id="bolas" src="https://xavitinho.github.io/bolas/" title="bolas"></iframe>'
   e = document.getElementById('backbt')
   e.innerHTML = `
     <button class="backbt">
