@@ -34,6 +34,10 @@ function makebuttons() {
   let e = document.getElementById('backbt')
   e.innerHTML = ''
 
+  e = document.getElementById('gamecontainer')
+  e.innerHTML = ''
+  e.className = 'invisible'
+
   let buttonslist = document.getElementById('middlesection')
   buttonslist.innerHTML = ''
 
@@ -118,17 +122,39 @@ async function biblia() {
 
   e = document.getElementById('backbt')
   e.innerHTML = `
-    <button class="backbt">
-    <ion-icon name="arrow-back-circle" onclick="makebuttons()"></ion-icon>
+    <button class="backbt" onclick="makebuttons()">
+    <ion-icon name="arrow-back-circle"></ion-icon>
     </button>`
 }
 
 function exe_bolas () {
   let e = document.getElementById('middlesection')
-  e.innerHTML = '<iframe id="bolas" src="https://xavitinho.github.io/bolas/" title="bolas"></iframe>'
+  e.innerHTML = ''
+  e = document.getElementById('gamecontainer')
+  e.className = 'gamecontainer'
+  e.innerHTML =   `
+    <button class="buttonfullscreen" onclick="fullscreen('bolas')"> 
+      <ion-icon name="expand-sharp">
+      </ion-icon>
+    </button>
+    <iframe id="bolas" src="https://xavitinho.github.io/bolas/" title="bolas">
+    </iframe>`
   e = document.getElementById('backbt')
   e.innerHTML = `
-    <button class="backbt">
-    <ion-icon name="arrow-back-circle" onclick="makebuttons()"></ion-icon>
+    <button class="backbt" onclick="makebuttons()">
+    <ion-icon name="arrow-back-circle"></ion-icon>
     </button>`
+}
+
+function fullscreen(element){
+  let e = document.getElementById(element)
+  if (document.fullscreenElement) {
+    document.exitFullscreen()
+    document.cancelFullScreen()
+  } else {
+    e.requestFullscreen()
+    if(screen.orientation){
+      screen.orientation.lock("landscape-primary")
+    }
+  }
 }
