@@ -113,6 +113,11 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+}
+
+.link:hover {
+  letter-spacing: .1em;
 }
 
 .blackbutton {
@@ -161,4 +166,9 @@ ion-icon {
   background-color: #0000;
   border: none;
   cursor: pointer;
+}
+
+#bolas {
+  width: 1024px;
+  height: 600px;
 }
