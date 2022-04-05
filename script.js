@@ -1,5 +1,5 @@
 let links = {
-  facebook: ['facebook', 'https://facebook.com/xavihtube', 'fb.me/xavihtube', 'logo-facebook'],
+  facebook: ['facebook', 'https://facebook.com/xaviihtube', 'fb.me/xaviihtube', 'logo-facebook'],
   twitter: ['twitter', 'https://twitter.com/xavitinho', '@xavitinho', 'logo-twitter'],
   instagram: ['instagram', 'https://www.instagram.com/xaviihtube/', '@xaviihtube', 'logo-instagram'],
   discord: ['discord', 'https://discord.com/users/410886443964039169', 'xavier 🌈#7692', 'logo-discord'],
