@@ -1,7 +1,7 @@
 let links = {
   facebook: ['facebook', 'https://facebook.com/xavihtube', 'fb.me/xavihtube', 'logo-facebook'],
   twitter: ['twitter', 'https://twitter.com/xavitinho', '@xavitinho', 'logo-twitter'],
-  instagram: ['instagram', 'https://www.instagram.com/xavihtube/', '@xavihtube', 'logo-instagram'],
+  instagram: ['instagram', 'https://www.instagram.com/xaviihtube/', '@xaviihtube', 'logo-instagram'],
   discord: ['discord', 'https://discord.com/users/410886443964039169', 'xavier 🌈#7692', 'logo-discord'],
   tiktok: ['tiktok', 'https://tiktok.com/@xavitinho', '@xavitinho', 'logo-tiktok'],
   spotify: ['spotify', 'https://open.spotify.com/user/asxvitor', '@asxvitor', 'play-circle'],
