@@ -27,7 +27,6 @@ html {
   display: flex;
   color: #000;
   font-family: "Arial";
-  background-color: #000;
   height: 100vz;
 }
 
@@ -114,6 +113,29 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-size: 100% 1300%;
+
+  -webkit-animation: rainbow 18s ease infinite;
+  -z-animation: rainbow 18s ease infinite;
+  -o-animation: rainbow 18s ease infinite;
+  animation: rainbow 18s ease infinite;}
+
+  @-webkit-keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:0% 100%}
+  }
+  @-moz-keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:0% 100%}
+  }
+  @-o-keyframes rainbow {
+    0%{background-position:0% 0%}
+    100%{background-position:0% 100%}
+  }
+  @keyframes rainbow { 
+    0%{background-position:0% 0%}
+    100%{background-position:0% 100%}
+  }
 }
 
 .link:hover {
