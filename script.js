@@ -73,7 +73,7 @@ function makebuttons() {
 }
 
 function colorbuttons() {
-  let colors = ['#f00c', '#f80c', '#ff0c', '#8f0c', '#0f0', '#0f8c', '#0ffc', '#08fc', '#00fc', '#80fc', '#f0fc', '#f08c']
+  let colors = ['#f00c', '#f80c', '#dd0c', '#8f0c', '#0f0', '#0f8c', '#0ddc', '#08fc', '#00fc', '#80fc', '#d0dc', '#f08c']
   //let colors = ['#ff2400', '#e81d1d', '#e8b71d', '#e3e81d', '#1de840', '#1ddde8', '#2b1de8', '#dd00f3', '#dd00f3']
   for (link of Object.keys(links)) {
     let e = document.getElementById(`link_${link}`)
