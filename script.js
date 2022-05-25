@@ -5,11 +5,11 @@ let links = {
   discord: ['discord', 'https://discord.com/users/410886443964039169', 'xavier 🌈#7692', 'logo-discord'],
   tiktok: ['tiktok', 'https://tiktok.com/@xavitinho', '@xavitinho', 'logo-tiktok'],
   spotify: ['spotify', 'https://open.spotify.com/user/asxvitor', '@asxvitor', 'play-circle'],
+  letterboxd: ['letterboxd', 'letterboxd.com/xavitinho', false, 'film-outline'],
   youtube: ['youtube', 'https://youtube.com/xrvitro', false, 'logo-youtube'],
   twitch: ['twitch', 'https://twitch.tv/xavierxavierv', false, 'logo-twitch'],
   github: ['github', 'https://github.com/xavitinho', false, 'logo-github'],
-  itchio: ['itch.io', 'https://xaax.itch.io', false, 'game-controller'],
-  bolas: ['bolas', '/bolas', 'bolas', 'game-controller', true]
+  itchio: ['itch.io', 'https://xaax.itch.io', false, 'game-controller']
 }
 
 let bg = Math.floor(Math.random() * 6)
@@ -55,33 +55,30 @@ function makebuttons() {
     }
   }
   buttonslist.innerHTML +=
-  `<div class="link" id="link_bolas" 
-  onclick="exe_bolas()"
-  onmouseover="mouseover('bolas')"
-  onmouseout="mouseout('bolas')">
-     <ion-icon name="game-controller">
-     </ion-icon>
-     bolas
+  `<div class="link">
+    <button class="blackbutton" onclick="exe_bolas()">
+      <ion-icon name="game-controller">
+      </ion-icon>
+      bolas
+    </button>
   </div>
   <div class="link">
-  <button class="blackbutton" onclick="biblia()">
-     <ion-icon name="book">
-     </ion-icon>
-     A Bíblia Sagrada
-  </button>
+    <button class="blackbutton" onclick="biblia()">
+      <ion-icon name="book">
+      </ion-icon>
+      A Bíblia Sagrada
+    </button>
   </div>`
   colorbuttons()
 }
 
 function colorbuttons() {
-  let colors = ['#f00c', '#f80c', '#ff0c', '#8f0c', '#0f0', '#0f8c', '#0ffc', '#08fc', '#00fc', '#80fc', '#f0fc', '#f08c', '#f00c']
-  let i = 1;
-  let colorant = colors[0]
+  let colors = ['#f00c', '#f80c', '#ff0c', '#8f0c', '#0f0', '#0f8c', '#0ffc', '#08fc', '#00fc', '#80fc', '#f0fc', '#f08c']
+  //let colors = ['#ff2400', '#e81d1d', '#e8b71d', '#e3e81d', '#1de840', '#1ddde8', '#2b1de8', '#dd00f3', '#dd00f3']
   for (link of Object.keys(links)) {
     let e = document.getElementById(`link_${link}`)
-    e.style = `background-image: linear-gradient(${colorant}, ${colors[i]});`
-    colorant = colors[i]
-    i++;
+    e.style = `background-image: linear-gradient(${colors.toString()}, ${colors[0]}, ${colors[1]});`
+    colors.push(colors.shift())
   }
 }
 
