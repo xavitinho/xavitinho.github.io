@@ -5,7 +5,7 @@ let links = {
   discord: ['discord', 'https://discord.com/users/410886443964039169', 'xavier 🌈#7692', 'logo-discord'],
   tiktok: ['tiktok', 'https://tiktok.com/@xavitinho', '@xavitinho', 'logo-tiktok'],
   spotify: ['spotify', 'https://open.spotify.com/user/asxvitor', '@asxvitor', 'play-circle'],
-  letterboxd: ['letterboxd', 'letterboxd.com/xavitinho', false, 'film-outline'],
+  letterboxd: ['letterboxd', 'https://letterboxd.com/xavitinho', false, 'film-outline'],
   youtube: ['youtube', 'https://youtube.com/xrvitro', false, 'logo-youtube'],
   twitch: ['twitch', 'https://twitch.tv/xavierxavierv', false, 'logo-twitch'],
   github: ['github', 'https://github.com/xavitinho', false, 'logo-github'],
