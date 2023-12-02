@@ -61,7 +61,7 @@ function makebuttons() {
   b.className = 'link'
   b.onclick = () => biblia()
   b.innerHTML = '<ion-icon name="book"></ion-icon> A Bíblia Sagrada'
-  line.appendChild(b)
+  buttonslist.appendChild(b)
   
 }
 
