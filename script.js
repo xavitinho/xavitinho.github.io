@@ -3,8 +3,7 @@ let links = {
   twitter: ['twitter', 'https://twitter.com/xavitinho', '@xavitinho', 'logo-twitter'],
   instagram: ['instagram', 'https://www.instagram.com/xaviihtube/', '@xaviihtube', 'logo-instagram'],
   discord: ['discord', 'https://discord.com/users/724292285981786212', 'xaax#7146', 'logo-discord'],
-  tiktok1: ['tiktok', 'https://tiktok.com/@xavitinho', '@xavitinho', 'logo-tiktok'],
-  tiktok2: ['tiktok', 'https://tiktok.com/@xaviihtube', '@xaviihtube', 'logo-tiktok'],
+  tiktok: ['tiktok', 'https://tiktok.com/@xavitinho', '@xavitinho', 'logo-tiktok'],
   spotify: ['spotify', 'https://open.spotify.com/user/asxvitor', '@asxvitor', 'play-circle'],
   letterboxd: ['letterboxd', 'https://letterboxd.com/xavitinho', false, 'film-outline'],
   youtube: ['youtube', 'https://youtube.com/@xavitinho', false, 'logo-youtube'],
@@ -57,8 +56,13 @@ function makebuttons() {
   b.onclick = () => exe_bolas()
   b.innerHTML = '<ion-icon name="game-controller"></ion-icon> bolas'
   buttonslist.appendChild(b)
-  
 
+  b = document.createElement('a')
+  b.className = 'link'
+  b.onclick = () => biblia()
+  b.innerHTML = '<ion-icon name="book"></ion-icon> A Bíblia Sagrada'
+  line.appendChild(b)
+  
 }
 
 async function biblia() {
