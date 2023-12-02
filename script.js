@@ -61,6 +61,28 @@ function makebuttons() {
 
 }
 
+async function biblia() {
+  let bibliatxt = 'deu ruim'
+  await fetch('https://xaax.repl.co/biblia.txt')
+    .then(response => response.text())
+    .then(txtResponse => {
+      bibliatxt = txtResponse
+    })
+
+  let e = document.getElementById('middlesection')
+  e.innerHTML = '<div class="bgbiblia"><biblia id="biblia"></biblia></div>'
+
+  e = document.getElementById('biblia')
+  e.innerText = bibliatxt
+  e.innerHTML += '<br><br><br><br><br><br><br><br>'
+
+  e = document.getElementById('backbt')
+  e.innerHTML = `
+    <button class="backbt" onclick="makebuttons()">
+    <ion-icon name="arrow-back-circle"></ion-icon>
+    </button>`
+}
+
 function mouseover(link) {
   let e = document.getElementById(`link_${link}`)
   if (links[link][2]) {
