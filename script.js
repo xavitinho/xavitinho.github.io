@@ -1,15 +1,17 @@
 let links = {
-  twitter: ['twitter', 'https://twitter.com/xavihtec', '@xavihtec', 'logo-twitter'],
+  facebook: ['facebook', 'https://facebook.com/xaviihtube', 'fb.me/xaviihtube', 'logo-facebook'],
+  twitter: ['twitter', 'https://twitter.com/xavitinho', '@xavitinho', 'logo-twitter'],
+  instagram: ['instagram', 'https://www.instagram.com/xaviihtube/', '@xaviihtube', 'logo-instagram'],
+  discord: ['discord', 'https://discord.com/users/724292285981786212', 'xaax#7146', 'logo-discord'],
+  tiktok: ['tiktok', 'https://tiktok.com/@xavitinho', '@xavitinho', 'logo-tiktok'],
   tiktok: ['tiktok', 'https://tiktok.com/@xaviihtube', '@xaviihtube', 'logo-tiktok'],
   spotify: ['spotify', 'https://open.spotify.com/user/asxvitor', '@asxvitor', 'play-circle'],
   letterboxd: ['letterboxd', 'https://letterboxd.com/xavitinho', false, 'film-outline'],
   youtube: ['youtube', 'https://youtube.com/@xavitinho', false, 'logo-youtube'],
   twitch: ['twitch', 'https://twitch.tv/xaviihtube', false, 'logo-twitch'],
   github: ['github', 'https://github.com/xavitinho', false, 'logo-github'],
-  itchio: ['itch.io', 'https://xaax.itch.io', false, 'game-controller'],
-  txtvendas: ['txt alerta de venda ✘ bot', 'https://twitter.com/txtvendas', '@txtvendas', 'logo-twitter']
+  itchio: ['itch.io', 'https://xaax.itch.io', false, 'game-controller']
 }
-
 
 makebuttons()
 
