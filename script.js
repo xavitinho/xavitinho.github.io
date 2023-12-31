@@ -59,7 +59,7 @@ function makebuttons() {
 
   b = document.createElement('a')
   b.className = 'link'
-  b.href = '/marxmp3'
+  b.href = '/marx.mp3'
   b.target = "_blank"
   b.innerHTML = '<ion-icon name="volume-high-sharp"></ion-icon> marx.mp3'
   buttonslist.appendChild(b)
