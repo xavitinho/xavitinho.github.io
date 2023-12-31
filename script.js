@@ -59,12 +59,13 @@ function makebuttons() {
 
   b = document.createElement('a')
   b.className = 'link'
-  b.onclick = () => biblia()
-  b.innerHTML = '<ion-icon name="book"></ion-icon> A Bíblia Sagrada'
+  b.href = '/marx.mp3'
+  b.target = "_blank"
+  b.innerHTML = '<ion-icon name="volume-high-sharp"></ion-icon> marx.mp3'
   buttonslist.appendChild(b)
   
 }
-
+/*
 async function biblia() {
   let bibliatxt = 'deu ruim'
   await fetch('https://xaax.repl.co/biblia.txt')
@@ -85,7 +86,7 @@ async function biblia() {
     <button class="backbt" onclick="makebuttons()">
     <ion-icon name="arrow-back-circle"></ion-icon>
     </button>`
-}
+}*/
 
 function mouseover(link) {
   let e = document.getElementById(`link_${link}`)
