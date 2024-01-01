@@ -1,225 +1,111 @@
-/* width */
-::-webkit-scrollbar {
-  width: 10px;
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@600&display=swap');
+
+* {
+    box-sizing: border-box;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
 }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: #888;
+body {
+    font-family: 'Teko', sans-serif;
+    font-size: 20px;
+    background-image: url("/backgrounds/3.jpg");
+    background-position: center;
+    background-size: cover;
+    display: flex;
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-  background: #555;
-}
-
-html { 
-  min-height: 100%;
-}
-
-#body {
-  min-height: 90vh;
-  display: flex;
-  color: #000;
-  font-family: "Arial";
-  height: 100vz;
-}
-
-#bg {
-  background-image: url("backgrounds/3.jpg");
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  height: 100%;
-  width: 100%;
-  background-position: center;
-  background-size: auto 112%;
-}
-
-#middlesection, #rightsection {
-  display: flex; 
-  flex-direction: column;
-  align-items: center;
-}
-
-@media only screen and (min-width: 600px) {
-  #middlesection {
-    width: 30em;
-    max-width: 30%;
-    height: 80%;
-    max-height: 80%;
+#middlesection {
     margin: auto;
-    z-index: 2;
-  }
-  #rightsection, #leftsection {
-    position: fixed;
-    top: 10%;
-    width: 30%;
-    height: 80%;
-  }
-  #leftsection {
-    left: 3%;
-  }
-  #rightsection {
-    right: 3% 
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    display: flex; 
+    height: 90%;
+    display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  #middlesection, #rightsection, #leftsection {
-    width: 30em;
-    max-width: 90%;
-    height: 80vh;
-    max-height: 30%;
-    position: flex;
-    z-index: 2;
-    margin-bottom: 20px;
-  }
-}
-
-#rightsection, #leftsection {
-  background-color: #4747ff;
-  border: solid 4px #000;
-  box-shadow: 10px 10px 0px #000;
-}
-
-.link {
-  color: #000;
-  text-decoration: none;
-  font-weight: 900;
-  width: 100%;
-  height: 3em;
-  max-height: 8%;
-  margin: 3px;
-  border-radius: 1.5em;
-  /* offset-x | offset-y | blur-radius | color */
-  box-shadow: 4px 4px 0px #000;
-  border: solid 2px #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #fff;
-}
-
-.red {
-  background-color: #FF544F;
-}
-.orange {
-  background-color: #FF8E1E;
-}
-.yellow {
-  background-color: #FFF759;
-}
-.yellowgreen {
-  background-color: #D9FF4C;
-}
-.green {
-  background-color: #5DF641;
-}
-.green2 {
-  background-color: #39FCA4;
-}
-.greenwater {
-  background-color: #39FCDE;
-}
-.greenblue {
-  background-color: #39D3FC;
-}
-.blue {
-  background-color: #5989FF;
-}
-.purple {
-  background-color: #BA57FF;
-}
-.pink {
-  background-color: #F939FF;
-}
-
-.link:hover {
-  letter-spacing: .2em;
-  color: #fff;
-  background-color: #000;
-  box-shadow: 0px 0px 0px #000;
+    width: 25em;
+    max-width: 80%;
+    justify-content: space-between
 }
 
 ion-icon {
-  vertical-align: middle;
-  font-size: 1.5em;
-  margin: 0%;
-  margin-right: .2em;
+    font-size: 1.5em;
+    margin: 0% .5em;
 }
 
-.bgbiblia {
-  background-color: #000;
-  color: #fff;
-  padding: 5%;
-  margin-bottom: 10%;
+.link {
+    text-decoration: none;
+    color: #000;
+    height: calc(100%/15);
+    border-radius: 1.5em;
+    /* offset-x | offset-y | blur-radius | color */
+    box-shadow: 0 .3em 0px #000;
+    border: solid 3px #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#biblia {
-  font-family: 'Consolas';
+.link:hover {
+    letter-spacing: .2em;
+    color: #fff;
+    background-color: #000;
+    box-shadow: 0px 0px 0px #000;
 }
 
-#gamecontainer {
-  width: 1024px;
-  height: 600px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  max-width: 100%;
-  max-height: 100%;
+.link .legendahover, .link:hover .legenda {
+    display:none;
 }
 
-#bolas {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
+.link:hover .legendahover, .link .legenda {
+    display:block;
 }
 
-.buttonfullscreen {
-  position: relative;
-  left: 0.2em;
-  top: 100%;
-  z-index: 1;
-  color: #fff6;
-  background-color: #0006;
+.preto {
+    background-color:#fff;
 }
 
-.backbt {
-  position: fixed;
-  top: 1%;
-  left: 1%;
-  color: #fff;
-  background-color: #0000;
+.red {
+    background-color: #FF544F;
 }
 
-.buttonfullscreen, .backbt {
-  z-index: 3;
-  height: 2em;
-  width: 2em;
-  font-size: 1.5em;
-  border: none;
+.orange {
+    background-color: #FF8E1E;
 }
 
-.invisible {
-  display: none;
+.yellow {
+    background-color: #FFF759;
 }
 
-.link, .buttonfullscreen, .backbt, .blackbutton {
-  cursor: pointer;
+.yellowgreen {
+    background-color: #D9FF4C;
+}
+
+.green {
+    background-color: #5DF641;
+}
+
+.green2 {
+    background-color: #39FCA4;
+}
+
+.greenwater {
+    background-color: #39FCDE;
+}
+
+.greenblue {
+    background-color: #39D3FC;
+}
+
+.blue {
+    background-color: #5989FF;
+}
+
+.purple {
+    background-color: #BA57FF;
+}
+
+.pink {
+    background-color: #F939FF;
 }
