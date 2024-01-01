@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
@@ -16,9 +17,9 @@
     <meta name="twitter:creator" content="@xavitinho">
 </head>
 
-<body>
-    <div id="middlesection">
+<body style="backdrop-filter: blur(5px);">
 
+    <div id="middlesection" style="display:none;">
         <a href="https://facebook.com/xaviihtube" target="_blank" class="link red">
             <ion-icon name="logo-facebook"></ion-icon>
             <span class="legenda">facebook</span>
@@ -85,20 +86,32 @@
             <span class="legendahover">xaax.itch.io</span>
         </a>
 
-        <a href="/bolas" target="_blank" class="link preto" >
+        <a href="/bolas" target="_blank" class="link preto">
             <ion-icon name="game-controller"></ion-icon>
             <span class="legenda"> bolas</span>
             <span class="legendahover">xaax.itch.io/bolas</span>
         </a>
 
-        <a href="/marx.mp3" target="_blank" class="link preto" >
+        <a href="/marx.mp3" target="_blank" class="link preto">
             <ion-icon name="volume-high-sharp"></ion-icon>
             <span class="legenda"> marx.mp3</span>
             <span class="legendahover">marx.mp3</span>
         </a>
 
     </div>
+    <section class="modal red">
+        <p class="modal-content">por favor, confirme que você não é da ABIN.</p>
+        <a class="link preto" onclick="removemodal()">NÃO SOU DA ABIN</a>
+        <p><a href="/marx.mp3">sou da abin</a></p>
+    </section>
 
+    <script>
+        function removemodal() {
+            document.getElementsByClassName('modal')[0].style.display = 'none'
+            document.getElementsByTagName('body')[0].style['backdrop-filter'] = 'none'
+            document.getElementById('middlesection').style.display = 'flex'
+        }
+    </script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 

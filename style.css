@@ -4,7 +4,8 @@
     box-sizing: border-box;
 }
 
-body, html {
+body,
+html {
     height: 100%;
     width: 100%;
     margin: 0;
@@ -17,6 +18,9 @@ body {
     background-position: center;
     background-size: cover;
     display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 #middlesection {
@@ -34,17 +38,51 @@ ion-icon {
     margin: 0% .5em;
 }
 
+.modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    border: 4px solid #000;
+    border-radius: 1.5em;
+    padding: 1em;
+    box-shadow: 10px 10px 0px #000;
+}
+
+.modal p:not(.modal-content) {
+    margin: 0;
+}
+
+.modal-content {
+    margin-bottom: 2em;
+}
+
+a:not(.link) {
+    display: inline-block;
+    color: rgb(158, 13, 13);
+    text-decoration: none;
+    margin: .3em 0 0 0;
+}
+
+a:not(.link):hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
 .link {
     text-decoration: none;
     color: #000;
     height: calc(100%/15);
     border-radius: 1.5em;
-    /* offset-x | offset-y | blur-radius | color */
     box-shadow: 0 .3em 0px #000;
     border: solid 3px #000;
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    min-height: 2.5em;
+    min-width: 15em;
 }
 
 .link:hover {
@@ -54,16 +92,18 @@ ion-icon {
     box-shadow: 0px 0px 0px #000;
 }
 
-.link .legendahover, .link:hover .legenda {
-    display:none;
+.link .legendahover,
+.link:hover .legenda {
+    display: none;
 }
 
-.link:hover .legendahover, .link .legenda {
-    display:block;
+.link:hover .legendahover,
+.link .legenda {
+    display: block;
 }
 
 .preto {
-    background-color:#fff;
+    background-color: #fff;
 }
 
 .red {
