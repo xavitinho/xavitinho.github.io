@@ -52,7 +52,7 @@ a:not(.link) {
     display: inline-block;
     color: rgb(158, 13, 13);
     text-decoration: none;
-    margin: .3em 0 0 0;
+    margin: 0 0 .3em 0;
 }
 
 a:not(.link):hover {
@@ -153,3 +153,4 @@ a:not(.link):hover {
 .pink {
     background-color: #F939FF;
 }
+
